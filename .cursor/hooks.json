@@ -10,7 +10,7 @@
     ],
     "stop": [
       {
-        "command": "chunk validate",
+        "command": ".cursor/hooks/chunk-validate-stop.sh",
         "timeout": 600
       }
     ]
