@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "matcher": "git commit",
+        "command": "cd ${CURSOR_PROJECT_DIR:-.} && npm ci && npm test",
+        "timeout": 360
+      }
+    ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/chunk-validate-stop.sh",
+        "timeout": 600
+      }
+    ]
+  }
+}
