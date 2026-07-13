@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "bash -c 'cat >/dev/null; npm ci && npm test'",
+        "matcher": "git commit",
+        "timeout": 360
+      }
+    ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/chunk-validate-stop.sh",
+        "loop_limit": 3,
+        "timeout": 600
+      }
+    ]
+  }
+}
